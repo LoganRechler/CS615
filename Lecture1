@@ -56,3 +56,21 @@ Where can I find the "apue.h" file so I can run the code myself?
 Unix was rewritten in C: what was it originally written in?
 
 The "Unix history and basic features" says that roff is still used for man pages today. Where can I find this? A quick Google search came up with nothing and it seems like an interesting program.
+
+-------------------------------------------------------------------------
+After Class
+-------------------------------------------------------------------------
+Ping vs SSH:
+  Ping Uses ICMP packets
+  SSH uses TCP
+  Ping works on a lower layer
+traceroute <hostname/ip address>:
+  Tool to trace the route (hence the name) of a packet
+whois <ip address>:
+  checks what ip space it is registered to
+  Stevens website uses cloudfare, linux lab uses Arin
+dig/host:
+  dig is a dns lookup
+  host is a reverse dns lookup
+3 core principles:
+  security, scalability, simplicity
