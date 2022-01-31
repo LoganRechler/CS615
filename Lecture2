@@ -1,0 +1,48 @@
+Before Class
+-----------------------------------------
+Get information about the file system:
+	df -h /tmp
+Fill up the available space:
+	dd if=/dev/zero of=/tmp/big bs=1g
+Look at file size:
+	du -h /tmp/big
+Setting the file size but not writing data to it creates a sparse file:
+	Thinks it is big but doesn't actually use memory blocks
+View inode information:
+	df -i /tmp
+Use up all of the inodes:
+	fetch the program:
+		curl -0 https://stevens.netmeister.org/615/mkfiles.c
+	It creates a directory and loops forever creating new files in that directory until it fails
+	compile:
+		cc -Wall mkfiles.c
+Useful commands to work with aws ecw:
+	curl -o /tmp/awsaliases https://stevens.netmeister.org/615/awsaliases
+	mv /tmp/awsaliases ~/.awsaliases
+	echo "source ~/.awsaliases" >> ~/.bashrc
+
+You can run a command directly as you ssh (ssh stevens bash)
+
+Chapter 4: File Systems and Storage Models
+	Direct Attached Storage:
+		Hard drives are attached directly to the server
+		Can't be accessed by other servers
+	NAS (Network Attached Storage):
+		Sits in a central location
+		Makes it available over a network file system
+	Storage Area networks:
+		Scales better than NAS
+		Allows different clients to access chunks of storage on block levels
+	Cloud Storage:
+		1) file level
+		2) object level
+		3) block level
+	RAID (Redudant Array of Independent Disks):
+		Increases total disk space, performance, and data redundancy
+	File System Types:
+		Disk File Systems:
+			unix file system
+		Distributed File Systems:
+			different clients can access a centralized storage simultaneously (NAS)
+		Other:
+			Unix idea that everything is a file
