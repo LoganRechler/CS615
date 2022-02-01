@@ -46,3 +46,35 @@ Chapter 4: File Systems and Storage Models
 			different clients can access a centralized storage simultaneously (NAS)
 		Other:
 			Unix idea that everything is a file
+-------------------------------------
+After Class:
+-------------------------------------
+NetBSD
+	Disk reserves some space for the su
+	Multi-user operating space
+		unpriviliged users can fill up all the space except for the buffer (which is left for the su)
+
+Storage space has different areas
+	files
+	directories
+	allows you to go over 100% of the disk space
+
+number of inodes is inversely proportional to the block size
+
+s3
+	passing data through a HTTP REST API for cloud services to store
+
+xbd=xen balloon driver
+	xen=virtual
+	balloon driver because it can expand/contrast
+
+Journal File Systems:
+	Writes what you will be doing to the log
+	Then transfers it to the data section
+	Provides a backup over a standard file system
+
+export PS1="name"
+	makes the shell show "name" instead of cwd
+
+seclists
+	mailing list for vulnerabilities
