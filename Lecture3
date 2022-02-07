@@ -1,0 +1,67 @@
+Before Class
+-----------------------------------------------
+Software Installation and Package Management:
+	HTTP server connections are handled on ports 80 and 443
+	
+	Boot Process:
+		POST (power-on self test)
+		primary boot loader executes
+		mbr is accessed
+		secondary boot loader executes
+		hypervisor loads, privileged domain starts
+		virtual hardware is initialized by the domU for the guest OS
+		guest OS kernel loads
+
+	Second stage boot loaders:
+		init(8)
+			a process created explicitly by the kernel, spawns all other processes
+
+	software running in kernel space has full access to aspects of the hardware/OS
+	software running in user space has to rely on system calls
+	
+	Firmware:
+		software that lies between the kernel and the system software
+		exists between the hardware and software
+			RAID controllers/BIOS
+
+	System software exists in the operating system above the kernel but can still access the Frimware
+	Third-party applications are not in the OS and can only access system software/apps/utilities
+
+	Unix file system "/" used to be a partition for the OS to boot
+
+	unshareable files are data files that need to be individual to each host
+
+	static files do not change during runtime of the system (kernel/sys libs/binaries)
+
+	OS Installation:
+		hardware identification, privisioning, and registration
+		base OS installation
+		add-on applications installation
+		initial minimum system configuration
+		system registration
+		system restart
+
+	Package managers:
+		make package installation easy
+		automatically resolves software dependencies
+		keeps an inventory of which packages are installed
+		tracks which files belong to which package
+		tracks checksums for the files
+		provides security (downloading source code from third parties)
+
+	Managing software updates/patches:
+		be aware of softare updates
+			what new features they might include/what else has changed
+		track security updates/announcements
+			important to update when a vulnerability has been discovered and patched
+		consider privesc possibilities
+			small vulnerabilities can be dangerous if left open
+		consider shared vs static binaries
+			shared will have an immediate change
+			static will require the applications to be re-linked
+		restart applications after the software update
+			ensures that the update actually takes effect
+		verify update integrity
+			check the hash/sign
+		create your own patch
+			remove/restrict certain functionality (log4j)
