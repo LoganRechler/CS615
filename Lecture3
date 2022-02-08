@@ -65,3 +65,82 @@ Software Installation and Package Management:
 			check the hash/sign
 		create your own patch
 			remove/restrict certain functionality (log4j)
+
+----------------------------------------------------------------
+After Class
+----------------------------------------------------------------
+GRUB (grand unified boot loader)
+	replaced LILO (linux loader)
+Boot loader
+	starts the OS
+
+POST
+	basic functionality
+	checks if the hardware exists/isn't faulty
+	battery status
+
+internal battery
+	keeps the BIOS up and running
+
+BIOS (basic I/O system)
+	runs on a chip on the motherboard
+	keeps certain information in RAM
+	enable/disable hardware
+	specifies boot order
+	password protected
+		can be reset to avoid the password
+			pop out the battery to reset the BIOS
+If you have physical access to the system you own it (can do whatever you want with it)
+
+BIOS partition:
+	divides the disk
+	description of the partition is at the first block of the disk
+		512 bytes
+	4 partitions
+MBR (master boot record)
+	first 512 bytes of storage
+	last 2 bytes /0x55/0xAA
+	64 bytes allocated for partition table
+	446 bytes left for the boot loader/OS
+		all it has to do is provide enough space for the first stage boot loader to start the operating system
+First Stage Boot Loader
+	not OS specific
+
+TPM (trusted platform module)
+	it is difficult to keep them secure
+	anybody with physical access can control
+	requires you to trust whoever shipped it to you
+
+File System:
+	d->disk
+	c->OS
+		can be partitioned into different sections
+	
+	file types:
+		fifo
+			size of 0, uses file API
+		socket
+			size of 0, uses socket API
+		character device
+			any kind of input device
+		block device
+			mounted device (all possible disks, represents the hardware)
+		directory
+			directories used to be considered files
+			stores information about file names to link using the inodes
+		standard file
+			no difference between a file and a link
+				just an entry in a directory
+				doesn't know which linked file you looked at
+		symbolic link
+			says instead of looking at me, look at the other end of the link
+			can be done across disks (file systems)
+			can create symbolic links to a directory (can't create hard links to them)
+	File Name:
+		can be any sequence of bytes except for 2
+			/
+			null bytes
+
+	directories like /usr exist because there used to be a lack of space
+		/ would contain the minimum required to boot the OS
+
