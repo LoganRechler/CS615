@@ -1,0 +1,27 @@
+Pre-class Notes:
+-----------------------------------------
+Of Users and Groups
+
+6.2: Types of Users:
+	There are multiple system accounts to minimize privilege
+		Principle of Least Privilege
+	Role Accounts (aka service accounts):
+		Accounts such as one to allow for automated updates for a given application
+	Superuser
+
+6.3: Groups:
+	People want to have a higher level of privilege because it can be convenient to them
+	Aim to minimize the privilege for each group/user
+
+6.4: User Authentication:
+	something you know (password)
+	something you have (key/token)
+	something you are (biometrics)
+	2FA/MFA has grown more popular
+
+6.5: Summary:
+	All users are equal
+	Some users are more equal than others
+	All users are to be given precisely the access rights they need, but no more
+	Trust does not scale
+	You will always face tradeoffs
