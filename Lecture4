@@ -25,3 +25,72 @@ Of Users and Groups
 	All users are to be given precisely the access rights they need, but no more
 	Trust does not scale
 	You will always face tradeoffs
+--------------------------------------------------------------------------
+After Class
+--------------------------------------------------------------------------
+Types of software (not firmware):
+	System software
+	Kernel+libraries
+	Add-ons
+OS:
+	System software+kernel+libraries
+
+Steps to install an OS:
+	Requires an OS to install an OS
+		We boot off another OS device (network/usb/disk/etc)
+	Partition disk(s)
+		assumes the hardware was properly identified
+	Create a file system
+	Mount in rw mode
+	Extract software from somewhere (could be over the network/a cd/usb/etc)
+	Update the MBR/install bootloader
+	Reboot from installer OS into actual OS
+	Configure it for whatever you want it to do
+		Likely needs additional software
+	Update everything
+
+Very difficult to change the partitions after everything is done
+
+Container image/vm image:
+	Pre-built images that can be booted so an OS doesn't need to be installed every time
+
+Package Managers:
+	Makes installing packages much easier
+	Handles dependencies
+	Keeps track of what packages are installed
+	Integrity check
+	Vulnerability advisory
+	Easier to update
+	Easier to delete
+	Container generation/management
+
+Package Repository:
+	Keeps an inventory for what version is available for what package
+	Full Dependency graph
+
+Having multiple package managers causes it to lose track of what packages are installed and where
+	They each only keep track of their own stuff
+
+We are putting our trust into package managers (and wherever they're getting the packages from)
+	not auditing the software ourselves
+	Use cryptographic signatures to shift the trust from the web server to whoever uploads the software
+
+Zero Trust:
+	No inherent trust
+	Identity based access control (AuthN)
+	Role based (AtuhZ)
+	Time based/expires
+	Need encryption in transit
+
+	Basically:
+		apply Least Privilege to users
+		Have stong authentication for people
+		If you get in the way of people doing work they will get around it
+
+Service Accounts:
+	Allows applications to run with separate privileges
+
+Mutual Authentication:
+	It's nice to know that the place your about to send your password is the right one
+
+Kerberos is a very secure method
