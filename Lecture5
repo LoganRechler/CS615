@@ -1,0 +1,17 @@
+Before Class:
+------------------------------------
+Whois:
+One of the oldest internet protocols
+	considered obsolete because it is considered unreliable
+	still heavily relied upon
+Designed to be human readable, not machine readable
+	No standardized format
+	No consistent fields
+Became decentralized as the Internet grew larger
+Requires you to know which registry (RIR) is responsible for the domain to query
+	Only way to find out is really just to know, no standardized way of finding out
+	Can try querying IANA for the responsible server
+Conflict between the data requirement for registries and privacy laws such as GDPR
+ICANN is trying to replace whois
+	Difficult since everybody depends on it
+	Wants to implement RDAP (registration data access protocol), which is RESTful and standardized
