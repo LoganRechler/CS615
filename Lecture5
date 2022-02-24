@@ -15,3 +15,46 @@ Conflict between the data requirement for registries and privacy laws such as GD
 ICANN is trying to replace whois
 	Difficult since everybody depends on it
 	Wants to implement RDAP (registration data access protocol), which is RESTful and standardized
+-------------------------------------
+Post Class:
+-------------------------------------
+OSI:
+	Physical
+		actual hardware
+	Link
+		node-to-node communication
+	Network
+		packet transfers
+	Transport
+		most of TCP
+	
+	Session
+	Presentation
+	Application
+
+	Session and Presentation are where a lot of confusion is
+
+	Financial and political
+		pays for everything
+IPv4 is complicated, has a lot of fields
+	version, IHL, type of service, total length, identification, flags, fragment offset, ttl, protocol, header checksum, source address, destination address, options, and padding
+
+5 classes of IPv4
+	Class A: leading bit 0
+	Class B: leading bits 10
+	Class C: leading bits 110
+	Cladd D: leading bits 1110
+	Class E: leading bits 1111
+
+netmask splits an address into a network and host section
+
+
+IPv6 is less complex:
+	version, traffic class, flow control, payload length, next header, hop limit, source address, destination address
+128 bit addresses
+loopback address=::1
+IPv4 mapped address=::ffff:74.6.143.25
+Use brackets [] to separate ip and port
+
+IPv4 being 32 bits was just for experimentation, wasn't expected to actually be used
+IPv6 was introduced in 1995
