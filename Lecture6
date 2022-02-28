@@ -1,0 +1,52 @@
+Before Class:
+-----------------
+Simple Request to a remote host
+	Local host connects to remote host
+		turn remote hostname into IP address
+			determine how to resolve hostnames via /etc/nsswitch.conf
+			look in /etc/hosts -> if that fails use DNS
+			determine which DNS server to use via /etc/resolve.conf
+			open socket to the predetermined port on the DNS, send query, receive response
+		open socket to requested port on remote IP
+	Local host sends data
+	Remote host replies with data
+
+
+ktrace allows you to trace other commands
+	outputs in binary format
+		use kdump command to read it
+
+3 way tcp handshake:
+	syn
+	syn-ack
+	ack
+
+
+Physical/Link Layer
+	Network hardware and device drivers
+	cables
+Network layer
+	basic communication, addressing, routing
+Transport layer
+	delivery of data to applications
+Application layer
+	end-user applications
+APR (address resolution protocol)
+	who-has is broadcasted
+	is-at is unicast
+Gratuitous ARP
+	a is-at reply that nobody asked for, typically sent when a new interface comes up
+ARP is only in IPv4
+ndp=Neighbor discovery table
+	neighbor solicitation (who has) is multicast
+	neighbor advertizement (tgt is) to global unicast address
+	takes place in the network layer
+ICMP
+	ping (IPv4)
+		sends an echo request, receives an echo reply
+		has a type (8 for a request, 0 for a reply), code field (always 0), a checksum, an identifier, a sequence number, and a data section
+		the -p flag can be used to add data to the ping
+			can be used to exfiltrate data 
+	ping6 (IPv6)
+		virtually identical to IPv4
+
