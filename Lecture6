@@ -5,7 +5,7 @@ Simple Request to a remote host
 		turn remote hostname into IP address
 			determine how to resolve hostnames via /etc/nsswitch.conf
 			look in /etc/hosts -> if that fails use DNS
-			determine which DNS server to use via /etc/resolve.conf
+			determine which DNS server to use via /etc/resolv.conf
 			open socket to the predetermined port on the DNS, send query, receive response
 		open socket to requested port on remote IP
 	Local host sends data
@@ -49,4 +49,21 @@ ICMP
 			can be used to exfiltrate data 
 	ping6 (IPv6)
 		virtually identical to IPv4
+-------------------------------------------------
+Post-Class Notes
+-------------------------------------------------
+dns default packet is udp (port 53)
+standard ports/protocols are in /etc/services
+if you send a packet to a host with a closed port it sends a reset flag
+ACK is just adding 1 to the number
+SYN is a random number
 
+TCP uses a sliding window->only ACKs every nth packet when the window shifts
+TCP uses a 3 way handshake to close stuff too -> fin-fin ack-ack
+
+Source port: system picks a random high number port
+Ports 0-1024 requies su privileges to bind
+ICMP(v6) is its own protocl (not IPv4/6) running on the network layer
+Packet tracing
+	sends a packet to a random unused port with increasing TTL
+	reads the response messages to determien the path taken
