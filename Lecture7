@@ -1,0 +1,27 @@
+Pre-class Notes
+-----------------------------------
+/etc/hosts may have been created from the Network Information Conrol Center (NIC)
+First Unix name server was called BIND (Berkeley Internet Name Domain) 1984
+The root of the dns is "."
+	Subdivides into zones such as arpa, come, edu, org, net, gov, etc
+		These all are subdivided and the process continues
+	Nodes have a label (name) and can have Resource Records (RR)
+Resource Records
+	IP address associations via the A or AAAA records
+Fully Qualified Domain Name (FQDN)
+	has a . at the end (i.e; www.cs.stevens.edu.)
+	signals the tree that it does not need to continue going up
+	some systems will break if they receive a trailing .
+Fetch the top level file to see the number of TLDs:
+	curl -s ftp://rs.internic.net/domain/root.zone
+1504 TLDs as of March 16, 2021
+IANA manages the root zone, delegates authority to other domain name registries
+registries can censor, revoke, change, etc entries
+if you control one node you control the subtree of that node
+The DNS server we talk to is non-authoritative
+	it asks other servers
+lookup the name server responsible for the root zone via the dns:
+	dig -t ns . | more
+DNSSEC, DoT, and DoH each solve different threat models
+DNS traffic is rarely restricted
+
