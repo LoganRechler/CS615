@@ -24,4 +24,21 @@ lookup the name server responsible for the root zone via the dns:
 	dig -t ns . | more
 DNSSEC, DoT, and DoH each solve different threat models
 DNS traffic is rarely restricted
+-------------------------------------------------
+Post-class Notes
+------------------------------------------------
+When doing a tcpdump of a dns use -n
+DNSSEC requires a DNS key
+Caching resolver:
+	Asks the root who is responsible for .edu
+	gets that back, asks edu who is responsible for stevens.edu
+	
+	Has the addresses of the 13 resolvers pre-configured
+Your CDN:
+	sees all your traffic
+	controls your TLS certificate keys
+	Your multi-tenant environment
+	Might put restrictions on your clients
+	Separation of cache my require multiple domains
 
+Do HW 3
