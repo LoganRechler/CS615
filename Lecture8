@@ -1,0 +1,47 @@
+Pre-Class Notes:
+---------------------------------
+5.5 billion email accounts in use
+	1.8 billion gmail accounts
+300 billion emails sent/received per day
+
+mail logs messages in /var/log/maillog
+
+spamassassin is a process to determine if a message is spam
+
+DANE (DNS-based Authentication of Named Entities) allows for dns lookups for tsla records
+	has the sha-256 sums of certificates
+
+cosmetic from/to headers can be different from the smtp from/to headers
+
+spf (sender policy framework)
+	says who is allowed to send messages
+
+emails can have multiple @s
+	@1st.relay,@2nd.relay:user@final.domain
+emails can have !s
+	relay.domain!user@domain
+	rejected because it's relaying
+emails can have %s
+	user%final.domain@1st.relay
+	same as ! where it will be rejected
+punctuation is allowed
+	'*+-/=?^_`{|}~#$@netmeister.org
+plus signs are not special (but sometimes they are)
+	These 3 emails are considered the same by some mail services
+		jdoe@domain
+		jdoe+whatever@domain
+		jdoe+somethingelse@domain
+	plus addressing (subaddressing)
+dots are typically special
+	except in gmail
+none of this matters if you use quotes
+	allows you to use anything
+the local part of the address is case sensitive, the domain is not
+emojis can be in the local part of the address
+the local part can be 64 chars
+the domain name does not need to resolve
+	or can be international chars
+domains do not require dots (.)
+domains can be ip addresses
+	jschauma@[166.84.7.99]
+from and to can contain white spaces
