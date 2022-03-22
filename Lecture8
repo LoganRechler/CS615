@@ -36,6 +36,9 @@ dots are typically special
 	except in gmail
 none of this matters if you use quotes
 	allows you to use anything
+--------------------------------------------------------
+Post-Class Notes
+--------------------------------------------------------
 the local part of the address is case sensitive, the domain is not
 emojis can be in the local part of the address
 the local part can be 64 chars
@@ -45,7 +48,3 @@ domains do not require dots (.)
 domains can be ip addresses
 	jschauma@[166.84.7.99]
 from and to can contain white spaces
-
-------------------------------------------------------
-Post-class Notes
-------------------------------------------------------
