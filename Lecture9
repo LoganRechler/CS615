@@ -1,0 +1,36 @@
+Pre-Class Notes:
+-----------------------------------
+Writing Consistent Tools:
+	support the same command line arguments across tools
+		-V for version
+		-h for usage/help
+		-v for verbosity
+	password handling
+		passing the password from env:var is visible
+		same with pass:password (passing it directly)
+		passing it from a file is more secure (file:pathname)
+		using something like keychain:service (like security(1) on Macs) is better
+	input processing
+		process input as it comes in one line at a time, don't wait for the entire thing
+	temporary files
+		use mktemp(3)
+		remove the temporary files/directories on exit
+Signs of Triviality:
+	3 phases of software development
+		scripting
+			proof of concept
+			typically written in shell
+			used for simple tasks
+		programming
+			provides a consistent interface
+			accounts for changes in environment
+			can handle more complex tasks
+		software engineering
+			usually has a dedicated team
+			has measurable goals, specifications, etc
+	technical features
+		have a set number of outcomes for the tool
+		if something can fail, it needs to be checked
+		fail explicitly
+	documentation
+		write a man page for any tool you make
