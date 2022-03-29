@@ -34,3 +34,38 @@ Signs of Triviality:
 		fail explicitly
 	documentation
 		write a man page for any tool you make
+-----------------------------------------------
+Post Class Notes
+-----------------------------------------------
+Tools allow you to do the same thing over and over again more reliably
+documentation allows you (and others) to understand the tools
+aliases go in ~/bashrc
+if you write it for yourself you know all about your environment
+if you write it for your peers you get less assumptions (might require them to change some stuff i.e; username)
+as you open it up, your assumptions become fewer
+also requires more documentationwrite the man page first
+automation can make accountability harder
+/bin/sh
+	lowest common denominator
+	shell is a programming language
+
+check out oh-my-zsh/oh-my-bash
+write tools that do one things
+write tools that work together
+write programs to handle text streams because that is a universal interface
+boring and legible code is good code
+standard width terminal=80chars
+	refactor if code is wrapping too much
+comments should describe why the code is doing something (if it is not obvious)
+whitelist don't blacklist
+bug report:
+	describe the problem
+	steps to reproduce
+	expected results
+	actual results
+	
+	Optional:
+		screenshots/copy of terminal
+		suggested remediation
+		code patch
+
