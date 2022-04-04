@@ -1,0 +1,35 @@
+Pre-class Notes:
+--------------------------------------------------
+SAGE Booklet: Backups and Recovery:
+
+Backup and disaster recovery system principles:
+	1) Define acceptable loss
+	2) Back up everything
+	3) Organize
+	4) Protect against disasters
+	5) Document
+	6) Test continually
+Important to have physical security/organization for backups
+
+Database backup and recovery:
+	Difficult because databases are constantly changing
+	The elements relate to one another
+	Huge size
+	Expensive
+
+	Physical backup:
+		cold backup:
+			the database shuts down for the backup
+		hot backup:
+			backup done while the database is online
+	Logical Backup:
+		stores data objects not record data locations
+
+SAN:
+	two or more devices communicating via a serial SCSI protocol
+	raw disks and tap drives
+	allows different servers to access the same raw disk or tape drive
+NAS:
+	network attached storage
+	filesystems
+	allows different users to access the same filesystem or file
