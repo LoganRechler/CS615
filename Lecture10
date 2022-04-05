@@ -33,3 +33,52 @@ NAS:
 	network attached storage
 	filesystems
 	allows different users to access the same filesystem or file
+--------------------------------------------------
+Post-Class Notes:
+--------------------------------------------------
+HW:
+	stipulate that when the backup starts anything written after that will not be backed up
+	in the initial one you know how much data you need
+	hard to know afterwards
+		can have incremental (only backup changed stuff) vs a full backup
+	Both
+		might want to stipulate a max size
+		can use compression
+		use multiple EBS volumes and stitch them together
+		split the data into parts and put them into separate EBS volumes
+
+	write data to an ebs volume
+		create an instance, create a volume, attach the volume, mount it
+		can use a filesystem
+			can copy the directory heirarchy into the filesystem
+			has a lot of overhead
+			required for incremental
+		or write to the raw disk
+			can just dump the data to the device
+				but then can't selectively restore from it
+
+	Local Steps:
+		calculate the size that we need
+		create an ec2 instance
+			or require one to be running/specified
+		create a volume (or re-use a volume)
+		read data into the network
+	Remote:
+		read the data
+		write it to the disk
+	make the assumption that only 1 person is running it on 1 device at 1 time
+	can also look for pre-existing tools
+		or looking for something that uploads data to an ebs volume
+	possibly run dump on the local side | ssh | dd (or tar) to the disk
+
+Monitoring:
+	goal is to make the needle (event) bigger, not the haystack (metrics)
+	Graphs make it much easier for us to determine outliers
+		mrtg is a tool to graph logs
+	better to log counters/timers/averages rather than everything
+		saves space
+	if you know the baseline you can program triggers for outliers
+	email is not a scalable network monitoring solution
+		email is not instantaneous
+			can sit on a server for days
+	absence of a signal can be a signal
