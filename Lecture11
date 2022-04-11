@@ -1,0 +1,34 @@
+Pre-Class Notes
+-------------------------------------------
+Every server must be replaceable
+	prevents a single point of failure
+Document how you want servers/services to be set up
+	allows you to automate the process with a CM (Configuration Manager)
+System and service definitions are additive
+	CMs need to determine and apply the appropriate union of the two
+CM Requirements:
+	needs to be able to install software on the host
+		often relies on the package manager for this
+	needs to determine which services are running and should be running on a given host
+	set file permissions and ownership
+	install static files
+		such as /etc/ssh/ssh_known_hosts
+	generate host-specific data
+	command execution
+States:
+	unconfigured
+		the CM is not installed or isn't running
+	configured
+		the CM has run successfully and applied the required changes
+	in service
+		the host has been put into production
+	out of service
+		explicitly been taken out of service, no longer serving production traffic
+	deviant
+		the host is no longer in the desired configuration state
+	unknown
+idempotent
+	operations that can be run multiple times and will always produce the same results
+CMs control themselves
+	can cause problems
+
