@@ -31,4 +31,37 @@ idempotent
 	operations that can be run multiple times and will always produce the same results
 CMs control themselves
 	can cause problems
+---------------------------------------------------
+Post-class notes
+---------------------------------------------------
+CMs are software the confgiure the state of the system (doesn't make changes on the system)
+Manual changes can cause the state of the machine to change
+CM systems
+	try to make sure changes are idempotent
+	only applied if needed
+	eventually consistent
 
+node-ipc:
+	ipc=inter-process communication
+	version 11 uses the ""peacenotwar" package
+		if it is used in Russia it overwrites all data on the server with hearts
+	people got very mad
+	got a CVE, rated 9.8
+	implications of protestware
+		less trust in the open source community
+	takeaways
+		fork and self maintain your software, especially for corporate entities
+	don't update vs always update
+		security says always update
+		might pull a vulnerability in
+			or bugs
+			or just break things
+			or leads to tracking
+				can lead to targeted attacks
+		
+		should have a QA system to test updates
+			test pipeline
+
+Netflix Global Infrastructure:
+	uses open connect
+		partners with ISPs to imrpove user experiences by localizing traffic
