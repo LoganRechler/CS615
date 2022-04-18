@@ -1,0 +1,18 @@
+Pre-Class Notes
+-------------------------------------------
+The Attack Life Cycle:
+	adversaries are dedicated human beings with specific objectives
+	High Level Stages:
+		Initial reconnaissance
+			researches the target
+			performs network scans
+			identifies vulnerabilities
+		Initial compromise
+			identify and exploit a vulnerability to gain access to some systems
+			establish a foothold
+		Escalate privileges
+			get higher/root privileges
+		Internal recon and lateral movement
+			step 1 again but from inside the system
+		Complete mission
+
