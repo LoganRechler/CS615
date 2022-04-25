@@ -15,4 +15,35 @@ The Attack Life Cycle:
 		Internal recon and lateral movement
 			step 1 again but from inside the system
 		Complete mission
+--------------------------------
+Post-Class Notes
+--------------------------------
+Security is a trade-off
+	political
+Risk Assessment:
+	identify assets
+	identify threats
+	identify vulnerabilities
+	determine likelihood of damage
+	esstimate cost of recovery
+	estimate cost of defense
+
+risk is the likelihood of a threat successfully exploiting a vulnerability and the estimated cost both in the short and long term you may incur as a result
+
+systems can't be "secure"
+	risks can online be minimized
+
+Threat model:
+	identify what you're protecting
+	identify from whom you're protecting it
+		identify goals of the attacker
+		identify motivation of the attacker
+		identify capabilities of the attacker
+	identify threats you cannot defend against
+Threat modeling process:
+	identify assets, assign values
+	use STRIDE to identify threats
+	use DREAD+D to derive threat scores
+	determine/recommend defenses
+	zoom out/zoom in and repeat
 
