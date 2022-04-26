@@ -12,4 +12,28 @@ we are obligated to act in the public interest
 not like lawyers or doctors that have unified paths to become that role
 	and subsequent unified code of ethics
 most sysadmins have encountered ethical conflicts
+--------------------------------------
+Post-Class Notes
+--------------------------------------
+sudo cat >/somewhere
+	tries to write to /somewhere as a user
+Shell Steps:
+	split by whitespace
+	i/o redirection
+	execute commands
+shell redirection can be anywhere in the command
 
+similarities across different codes of ethics for tech:
+	contribute to/protect society
+	privacy of data
+		data is a liability
+		it's valuable but dangerous
+	social and ethical responsibility
+	important to keep yourself up to date on the latest technologies
+
+sysadmins are privileged positions
+	makes them targeted
+
+when facing a dilema:
+	get it in writing
+	increase transparency
